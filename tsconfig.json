@@ -12,6 +12,11 @@
     "moduleResolution": "node",
     "importHelpers": true,
     "target": "es2015",
+    "paths": {
+      "@app-shared/*": [
+        "./src/app/shared/*"
+      ],
+    },
     "lib": [
       "es2018",
       "dom"
