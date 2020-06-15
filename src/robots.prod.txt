@@ -1,0 +1,4 @@
+Sitemap: https://www.zuudoo.com/sitemap.xml
+# Allow web crawlers to index our site (prod env)
+User-agent: *
+Allow: /
