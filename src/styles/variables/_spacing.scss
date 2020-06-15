@@ -1,0 +1,28 @@
+$app-xs-spacing: .5rem;
+$app-sm-spacing: 1rem;
+$app-md-spacing: 2rem;
+$app-lg-spacing: 3rem;
+$app-xl-spacing: 4rem;
+$app-xxl-spacing: 5rem;
+$app-xxxl-spacing: 8rem;
+
+$spacingSizes: (xs, sm, md, lg, xl, xxl, xxxl);
+$spacingSides: (
+  ('', ''), 
+  (--l, -left), 
+  (--r, -right), 
+  (--t, -top), 
+  (--b, -bottom), 
+  (--tb, ''), 
+  (--lr, '')
+);
+
+$spacingUnits: (
+  ($app-xs-spacing, xs), 
+  ($app-sm-spacing, sm),
+  ($app-md-spacing, md),
+  ($app-lg-spacing, lg),
+  ($app-xl-spacing, xl),
+  ($app-xxl-spacing, xxl),
+  ($app-xxxl-spacing, xxxl)
+);

@@ -1,0 +1,22 @@
+@import "variables";
+
+.app-badge {
+  font-weight: 700;
+  border: none;
+  border-radius: 4px;
+  font-size: 12px;
+  padding: 2px 6px;
+  white-space: nowrap;
+}
+
+.app-badge--success {
+  @extend .app-badge;
+  color: $zd-green-3;
+  background-color: #eafcde;
+}
+
+.app-badge--danger {
+  @extend .app-badge;
+  color: $red-900;
+  background-color: #fbd9d3;
+}

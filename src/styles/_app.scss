@@ -1,0 +1,51 @@
+// Defines custom variables functions and mixins
+@import "variables";
+
+// Use boostrap
+@import "bootstrap";
+
+// Open-ionic for the calendar
+@import '~open-iconic/font/css/open-iconic-bootstrap.css';
+
+// Defines shared styles accross components
+@import "shared/badges";
+@import "shared/blog";
+@import "shared/buttons";
+@import "shared/container";
+@import "shared/dropdown";
+@import "shared/flex";
+@import "shared/forms";
+@import "shared/globals";
+@import "shared/google-autocomplete";
+@import "shared/icon";
+@import "shared/images";
+@import "shared/inputs";
+@import "shared/link";
+@import "shared/lists";
+@import "shared/margin";
+@import "shared/padding";
+@import "shared/phases";
+@import "shared/pill";
+@import "shared/sections";
+@import "shared/separator";
+@import "shared/typography";
+
+html {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  font-size: $app-font-size--base;
+}
+
+body {
+  height: 100%;
+  background: $background;
+  font-size: $app-font-size--body;
+  line-height: 1.61;
+  font-weight: 500;
+}
+
+// Put Google Maps results on top of everything else
+.pac-container {
+  z-index: 1051 !important;
+}

@@ -1,0 +1,22 @@
+@import "variables";
+
+.app-ul {
+  list-style: none;
+
+  li {
+    text-indent: -1.8em;
+  }
+
+  li::before {
+    content: "• ";
+    color: $zd-green-1;
+    padding-right: 10px;
+    font-size: 2rem;
+  }
+}
+
+.app-ul--dark {
+  li::before {
+    color: $zd-green-3;
+  }
+}

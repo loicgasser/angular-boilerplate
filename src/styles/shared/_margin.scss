@@ -1,0 +1,38 @@
+@import "variables";
+
+.app-margin__auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.app-margin__auto--l {
+  margin-left: auto;
+}
+
+.app-margin__auto--r {
+  margin-right: auto;
+}
+
+@each $spacingVar, $spacingName in $spacingUnits {
+  @each $side, $cssSuffix in $spacingSides {
+    @if $side != --tb {
+      @if $side != --lr {
+        .app-margin__#{$spacingName}#{$side} {
+          margin#{$cssSuffix}: $spacingVar;
+        }
+      }
+    }
+    @if $side == --lr {
+      .app-margin__#{$spacingName}#{$side} {
+        margin-left: $spacingVar;
+        margin-right: $spacingVar;
+      }
+    }
+    @if $side == --tb {
+      .app-margin__#{$spacingName}#{$side} {
+        margin-top: $spacingVar;
+        margin-bottom: $spacingVar;
+      }
+    }
+  }
+}

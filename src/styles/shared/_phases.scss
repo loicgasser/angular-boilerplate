@@ -1,0 +1,9 @@
+@each $phase in $phases {
+  .app-phase-bg--#{$phase} {
+    background-color: get-phase-color($phase);
+  }
+}
+
+.app-phase-bg--primary {
+  background-color: $primary;
+}

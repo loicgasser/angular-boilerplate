@@ -1,0 +1,137 @@
+@font-face {
+  font-family: "Museo Sans";
+  src: url(/assets/fonts/MuseoSans_100.otf);
+  font-weight: 100;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Museo Sans";
+  src: url(/assets/fonts/MuseoSans_300.otf);
+  font-weight: 300;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Museo Sans";
+  src: url(/assets/fonts/MuseoSans_500.otf);
+  font-weight: 500;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Museo Sans";
+  src: url(/assets/fonts/MuseoSans_700.otf);
+  font-weight: 700;
+  font-display: swap;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.card-title,
+.text-title {
+  color: $heading;
+}
+
+@for $i from 10 through 78 {
+  .text-#{$i} {
+    font-size: #{$i}px !important;
+  }
+}
+
+@for $i from 300 through 900 {
+  .font-weight-#{$i} {
+    font-weight: $i !important;
+  }
+}
+
+.app-text-small {
+  font-size: 0.75rem;
+}
+
+.app-grey-text {
+  color: $grey-600;
+}
+
+.app-dark-grey-text {
+  color: $grey-800;
+}
+
+.app-green-text {
+  color: $green-800;
+}
+
+.app-red-text {
+  color: $red;
+}
+
+.app-white-text {
+  color: $white;
+}
+
+.app-zuudoo-green-text {
+  color: $primary;
+}
+
+//Line-height formula:
+//(Font-size in px + (leading / 2)) / font-size in px
+.app-text--base {
+  font-size: $app-font-size--body;
+  line-height: $app-line-height--body;
+}
+
+// Header styles declaration app-text--h1
+@each $header in $headers {
+  .app-text--#{$header} {
+    font-size: get-header-font-size($header);
+    font-weight: get-header-font-weight($header);
+    line-height: get-header-line-height($header);
+  }
+}
+
+.app-text--menu {
+  font-size: $app-font-size--menu;
+  line-height: 1.59;
+  .active {
+    font-weight: 700;
+  }
+}
+
+.app-text--menu-small {
+  font-size: 1.4rem;
+  .active {
+    font-weight: 700;
+  }
+}
+
+.app-text--list {
+  font-size: $app-font-size--list;
+  line-height: 1.72;
+}
+
+.app-text--caption {
+  font-size: $app-font-size--caption;
+  line-height: 1.8;
+}
+
+.app-text--button {
+  font-size: $app-font-size--button;
+  line-height: 1.61;
+}
+
+.app-text--bold {
+  font-weight: 700;
+}
+
+.app-text--regular {
+  font-weight: 500;
+}
+
+.app-no-select {
+  user-select: none;
+}
+
+.app-text-wrap {
+  white-space: normal;
+}

@@ -1,0 +1,57 @@
+.app-dropdown {
+  padding: 1rem;
+  border-radius: 4px;
+  background-color: $white;
+  cursor: pointer;
+  width: 100%;
+  display: flex;
+  border: 1px solid #ced4da;
+  color: $gray-700;
+  span {
+    max-width: 90%;
+    overflow: hidden;
+  }
+  fa-icon {
+    margin-left: auto;
+  }
+}
+
+.app-dropdown--colorful {
+  font-size: 1.5rem;
+  border: 2px solid lighten($zd-red-1, 10);
+  background: $zd-red-3;
+  color: $white;
+  font-weight: 700;
+  padding: 1.3rem 0 1.3rem 1.3rem;
+  width: auto;
+  span {
+    padding-right: 2.3rem;
+  }
+  fa-icon {
+    width: 5rem;
+    display: flex;
+    margin-top: -1.3rem;
+    margin-bottom: -1.3rem;
+    font-size: 1.9rem;
+    border-left: 2px solid lighten($zd-red-1, 10);
+  }
+  svg {
+    margin: auto;
+  }
+}
+
+@include media-breakpoint-down(md) {
+  .app-dropdown--colorful {
+    font-size: 1.3rem;
+    padding: 1rem 0 1rem 1rem;
+    span {
+      padding-right: 1rem;
+    }
+    fa-icon {
+      width: 4rem;
+      margin-top: -1rem;
+      margin-bottom: -1rem;
+      font-size: 1.7rem;
+    }
+  }
+}

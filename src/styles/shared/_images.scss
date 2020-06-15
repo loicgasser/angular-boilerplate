@@ -1,0 +1,24 @@
+@import "variables";
+
+@each $size-name, $img-size-px, $placeholder-fontsize in $app-img-sizes {
+  .img-#{$size-name} {
+    width: #{$img-size-px};
+    height: #{$img-size-px};
+  }
+}
+
+.img-fit {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+@each $char, $color in $chars {
+  .app-placeholder-#{$char} {
+    background: radial-gradient(ellipse at center, lighten($color, 30%) 0%, $color 100%);
+  }
+}
+
+.app-img__text-caption {
+  text-align: center;
+  font-weight: 600;
+}

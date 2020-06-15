@@ -1,0 +1,61 @@
+// FONTS (Boostrap Variables)
+$app-font-family-heading: Museo Sans,
+Roboto,
+Helvetica,
+Arial,
+sans-serif !important;
+$app-font-family-base: Museo Sans,
+Roboto,
+Helvetica,
+Arial,
+sans-serif !important;
+
+// Line heights
+$app-line-height--body: 1.66;
+
+// Header variables
+$headers: h1 h2 h3 h4 h5;
+$headers-font-sizes: (
+  "h1": 2.4rem,
+  "h2": 1.8rem,
+  "h3": 1.8rem,
+  "h4": 1.6rem,
+  "h5": 1.4rem
+);
+$headers-font-weights: (
+  "h1": 700,
+  "h2": 700,
+  "h3": 500,
+  "h4": 500,
+  "h5": 700
+);
+$headers-font-line-heights: (
+  "h1": 1.60,
+  "h2": 1.61,
+  "h3": 1.61,
+  "h4": $app-line-height--body,
+  "h5": $app-line-height--body
+);
+
+@function get-header-font-size($key) {
+  @return map-get($headers-font-sizes, $key);
+}
+@function get-header-font-weight($key) {
+  @return map-get($headers-font-weights, $key);
+}
+@function get-header-line-height($key) {
+  @return map-get($headers-font-line-heights, $key);
+}
+
+//Assuming browser defualt font size of 16 px.
+//1rem = 10px;
+$app-ratio-rem:           1.6;
+$app-font-size--base:     62.5%;
+
+$app-font-size--body:     1.3rem;
+$app-font-size--caption:  1.1rem;
+$app-font-size--list:     1.1rem;
+$app-font-size--menu:     1.6rem;
+$app-font-size--button:   1.8rem;
+$app-font-size--sidebar:  1.3rem;
+$app-font-size--subtext:  1.1rem;

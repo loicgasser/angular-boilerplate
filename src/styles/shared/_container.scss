@@ -1,0 +1,152 @@
+@import "variables";
+
+// Page container used with .container from bootstrap
+.app-page-container {
+  padding: 0 $app-md-spacing $app-md-spacing $app-md-spacing;
+  margin: 0;
+}
+
+@include media-breakpoint-down(sm) {
+  .app-page-container {
+    padding: 0 !important;
+    margin: 0 !important;
+    max-width: 100% !important;
+  }
+}
+
+@include media-breakpoint-up(xs) {
+  .app-page-container {
+    margin: 0 auto $app-md-spacing auto;
+  }
+}
+
+// Page Header
+.app-page-header-container {
+  font-size: get-header-font-size(h1);
+  line-height: get-header-line-height(h1);
+  font-weight: 400;
+  margin-bottom: 0;
+  padding-top: $app-lg-spacing;
+  padding-bottom: $app-lg-spacing;
+}
+
+.app-page-header-container__content {
+  margin-left: $app-sm-spacing;
+  display: inline-block;
+}
+
+@include media-breakpoint-down(md) {
+  .app-page-header-container {
+    padding-top: $app-md-spacing;
+    padding-bottom: $app-md-spacing;
+    font-size: 2.1rem;
+  }
+
+  .app-page-header-container__content {
+    display: block;
+    margin-left: 0;
+    margin-top: $app-sm-spacing;
+  }
+}
+
+// Single container units inside bootstrap col
+.app-container {
+  width: 100%;
+  padding: $app-md-spacing;
+  margin-bottom: $app-md-spacing;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: $app-border-radius;
+}
+
+.app-container__heading {
+  font-size: get-header-font-size(h4);
+  margin: 0;
+  color: $grey-900;
+}
+
+.app-container-shadow {
+  box-shadow: $app-box-shadow;
+}
+
+.app-container-border-radius {
+  border-radius: $app-border-radius;
+}
+
+.app-dashed-container {
+  border: 1px dashed $zd-grey-1;
+  border-radius: 4px;
+}
+
+.app-container__content {
+  flex-grow: 1;
+  width: 100%;
+}
+
+.app-container__sidebar {
+  margin-left: $app-lg-spacing;
+  margin-right: $app-md-spacing;
+  min-width: 20rem;
+}
+
+.app-container__sidebar-wrapper {
+  position: sticky;
+  top: $app-md-spacing;
+}
+
+@include media-breakpoint-down(xs) {
+  .app-container.app-container-mobile--bottom {
+    margin-bottom: 0;
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  .app-container {
+    margin-bottom: 0;
+    box-shadow: none;
+  }
+
+  .app-container_column-left {
+    padding-right: 0 !important;
+  }
+
+  .app-container_column-right {
+    padding-left: 0 !important;
+  }
+}
+
+// Using Bootstraps grid .container max-widths.
+@media (min-width: map-get($grid-breakpoints, sm)) {
+  .app-container {
+    max-width: map-get($container-max-widths, sm);
+  }
+}
+
+@media (min-width: map-get($grid-breakpoints, md)) {
+  .app-container {
+    max-width: map-get($container-max-widths, md);
+  }
+}
+
+@media (min-width: map-get($grid-breakpoints, lg)) {
+  .app-container {
+    max-width: map-get($container-max-widths, lg);
+  }
+}
+
+@media (min-width: map-get($grid-breakpoints, xl)) {
+  .app-container {
+    max-width: map-get($container-max-widths, xl);
+  }
+}
+
+// Nav Container
+@include media-breakpoint-down(sm) {
+  .app-horizontal-nav-container--mobile {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    background-color: $white;
+  }
+  .app-container {
+    border-radius: 0;
+  }
+}

@@ -1,0 +1,69 @@
+@import "variables";
+
+*.app-required-field::after {
+  content: " *";
+  color: $pink-700;
+}
+
+.app-radio {
+  display: inline-flex;
+  align-items: center;
+}
+
+.app-radio__input {
+  margin: 0 0.5rem 0;
+}
+
+.app-radio--large {
+  font-size: 2rem;
+}
+
+.app-label {
+  font-weight: bold;
+  margin-bottom: $app-md-spacing;
+}
+
+.app-input-container {
+  max-width: 30rem;
+  display: block;
+}
+
+.app-input-base {
+  max-width: 18.9rem;
+}
+
+.app-form__buttons {
+  display: flex;
+  justify-content: flex-end;
+  padding: 8px 0 0 0;
+}
+
+.app-custom-form-radio {
+  cursor: pointer;
+  width: 100%;
+  border: 0 solid transparent;
+  position: relative;
+  box-shadow: 0 1px 6px rgba(57,73,76,0.35);
+  padding: $app-md-spacing;
+
+  input {
+    opacity: 0;
+    position: absolute;
+  }
+
+  &.active,
+  &:hover {
+    * {
+      color: $primary !important;
+    }
+    &::after {
+      content: " ";
+      border-bottom: 4px solid $primary;
+      display: block;
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+    }
+  }
+}

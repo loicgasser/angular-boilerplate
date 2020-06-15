@@ -29,9 +29,14 @@
               "src/robots.txt"
             ],
             "styles": [
-              "src/styles.scss",
+              "src/styles/_app.scss",
               "node_modules/cropperjs/dist/cropper.min.css"
             ],
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "src/styles"
+              ]
+            },
             "scripts": [
               "node_modules/moment/min/moment.min.js",
               "node_modules/cropperjs/dist/cropper.min.js",

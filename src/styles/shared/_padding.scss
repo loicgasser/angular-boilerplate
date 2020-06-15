@@ -1,0 +1,25 @@
+@import "variables";
+
+@each $spacingVar, $spacingName in $spacingUnits {
+  @each $side, $cssSuffix in $spacingSides {
+    @if $side != --tb {
+      @if $side != --lr {
+        .app-padding__#{$spacingName}#{$side} {
+          padding#{$cssSuffix}: $spacingVar;
+        }
+      }
+    }
+    @if $side == --lr {
+      .app-padding__#{$spacingName}#{$side} {
+        padding-left: $spacingVar;
+        padding-right: $spacingVar;
+      }
+    }
+    @if $side == --tb {
+      .app-padding__#{$spacingName}#{$side} {
+        padding-top: $spacingVar;
+        padding-bottom: $spacingVar;
+      }
+    }
+  }
+}

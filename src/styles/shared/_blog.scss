@@ -1,0 +1,10 @@
+@import "variables";
+
+.app-blog-post-container {
+  max-width: 700px !important;
+  img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 2rem;
+  }
+}

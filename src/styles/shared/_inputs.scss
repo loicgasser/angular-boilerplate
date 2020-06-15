@@ -1,0 +1,150 @@
+@import 'variables';
+
+// CHECKBOX 
+
+.app-checkbox {
+  appearance: none;
+  position: relative;
+  height: 15px;
+  width: 15px;
+  cursor: pointer;
+}
+
+.app-checkbox:focus {
+  outline: none;
+  box-shadow: 0 0 2px 2px $zd-green-1;
+}
+
+.app-checkbox::before {
+  content: '';
+  display: block;
+  border-radius: 4px;
+  height: 17px;
+  width: 17px;
+  margin: -1px 0 0 -1px;
+  opacity: 1;
+  background-color: lightgray;
+}
+
+.app-checkbox:checked::before {
+  background-color: $zd-green-3;
+}
+
+.app-checkbox:after {
+  transition: border .3s ease-in-out;
+}
+
+.app-checkbox:checked::after {
+  content: "";
+  display: block;
+  transform: rotate(45deg);
+  position: absolute;
+  top: 1px;
+  left: 5px;
+  height: 10px;
+  width: 5px;
+  border-bottom: 2px solid #FFF;
+  border-right: 2px solid #FFF;
+}
+
+// SEARCHBAR 
+
+.app-searchbar__field--grow {
+  max-width: 17rem;
+  min-width: 11rem;
+  width: 48%;
+  margin-right: 0.5rem;
+  position: relative;
+}
+
+.app-searchbar__field--grow-larger {
+  min-width: 17rem;
+}
+
+label.app-searchbar__label {
+  line-height: 1;
+  color: $white;
+}
+
+.app-searchbar__field--address-container {
+  flex-grow: 1;
+}
+
+.app-searchbar__column-inner-container {
+  display: flex;
+  padding: $app-md-spacing;
+  background: linear-gradient(
+    to bottom,
+    $zd-grey-3,
+    $zd-grey-2
+  );
+}
+
+.app-searchbar__colorful-bg {
+  background: $zd-green-4;
+}
+
+.app-searchbar__more-filters-link {
+  float: right;
+  font-weight: bold;
+}
+
+.in-map {
+  a.in-map {
+    color: lighten($zd-green-3, 50%);
+  }
+  .app-searchbar__left-filters-container {
+    width: auto;
+  }
+}
+
+
+// SEARCHBAR--MOBILE
+@include media-breakpoint-down(sm) {
+  .app-searchbar__column-inner-container {
+    padding: 0;
+    background: none;
+    box-shadow: none;
+  }
+
+  label.app-searchbar__label {
+    color: $text-color;
+  }
+
+  .app-searchbar__field--grow {
+    margin-bottom: $app-sm-spacing;
+    max-width: none;
+    width: 100%;
+    margin-right: 0;
+    &:first-child {
+      margin-right: $app-xs-spacing;
+    }
+  }
+
+  .app-searchbar__left-filters-container {
+    width: auto;
+  }
+
+  .app-searchbar__radius-filter {
+    max-width: 35%;
+  }
+
+  .in-map {
+    .app-searchbar__field--grow {
+      max-width: 180px; 
+    }
+    .app-searchbar__column-inner-container {
+      flex-direction: row;
+    }
+    &.app-searchbar__main-container {
+      background: rgba(211, 211, 211, 0.812);
+      padding: $app-sm-spacing;
+    }
+
+  }
+  a.in-map {
+    &.app-searchbar__more-filters-link {
+      color: #107064;
+    }
+  }
+}

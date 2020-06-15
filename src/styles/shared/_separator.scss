@@ -1,0 +1,35 @@
+@import "variables";
+
+.app-text-separtor {
+  text-align: center;
+  position: relative;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.15px;
+  margin: 16px 0px;
+}
+
+.app-text-separtor::before,
+.app-text-separtor::after  {
+  top: 50%;
+  border-right-style: none;
+  border-bottom-style: none;
+  border-left-style: none;
+  border-right-color: currentColor;
+  border-bottom-color: currentColor;
+  border-left-color: currentColor;
+  content: "";
+  position: absolute;
+  width: 40%;
+  border-width: 1px 0px 0px;
+  border-image: none;
+  border-top: 1px solid $zd-grey-1;
+}
+
+.app-text-separtor::before {
+  right: 0px;
+}
+
+.app-text-separtor::after {
+  left: 0px;
+}

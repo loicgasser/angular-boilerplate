@@ -1,0 +1,11 @@
+@import "variables";
+
+.app-link {
+  color: $link-color;
+  text-decoration: underline;
+  transition: color .1s ease-in-out;
+}
+
+.app-link:hover {
+  cursor: pointer;
+}

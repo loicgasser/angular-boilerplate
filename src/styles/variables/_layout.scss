@@ -1,0 +1,11 @@
+// Z Indexes
+$app-sidebar-z-index: 110;
+$app-header-z-index: 105;
+//notification z-index changed for mobile in notification scss.
+$app-notification-z-index: $app-header-z-index - 1; 
+
+// SIZES
+$app-header-height: 8rem;
+
+// LAYOUT VARS
+$app-sidebar-left-width: 90%;

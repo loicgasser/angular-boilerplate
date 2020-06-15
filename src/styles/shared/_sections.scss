@@ -1,0 +1,55 @@
+@import "variables";
+
+.app-section-title {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+
+  &:hover {
+    opacity: 0.85;
+  }
+}
+
+.app-section-title--collapsible {
+  cursor: pointer;
+  user-select: none;
+}
+
+.app-section-body {
+  display: flex;
+}
+
+.app-section-body--left {
+  min-width: 100px;
+  margin-top: auto;
+  margin-bottom: auto;
+  font-size: 10px;
+}
+
+.app-section-subtitle {
+  height: 40px;
+  align-items: center;
+  display: flex;
+  font-size: 14px;
+}
+
+.app-section-state {
+  border-radius: 3px;
+  color: $white;
+  font-weight: 600;
+  padding: 4px 8px;
+  text-align: center;
+}
+
+.app-section-map {
+  height: 150px;
+  display: inline-block;
+}
+
+.app-section-state--green {
+  background-color: $green;
+}
+
+.app-section-state--red {
+  background-color: $red;
+}
