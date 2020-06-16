@@ -90,7 +90,11 @@
     ],
     "transformIgnorePatterns": [
       "node_modules/(?!@ngrx|@agm)"
-    ]
+    ],
+    "moduleNameMapper": {
+      "@app-shared/(.*)": "<rootDir>/src/app/shared/$1",
+      "@app-front/(.*)": "<rootDir>/src/app/modules/front/$1"
+    }
   },
   "engines": {
     "node": "^12.16.3",

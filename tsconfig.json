@@ -16,6 +16,9 @@
       "@app-shared/*": [
         "./src/app/shared/*"
       ],
+      "@app-front/*": [
+        "./src/app/modules/front/*"
+      ],
     },
     "lib": [
       "es2018",
