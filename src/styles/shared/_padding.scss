@@ -4,19 +4,19 @@
   @each $side, $cssSuffix in $spacingSides {
     @if $side != --tb {
       @if $side != --lr {
-        .app-padding__#{$spacingName}#{$side} {
+        .app-#{$spacingName}-padding#{$side} {
           padding#{$cssSuffix}: $spacingVar;
         }
       }
     }
     @if $side == --lr {
-      .app-padding__#{$spacingName}#{$side} {
+      .app-#{$spacingName}-padding#{$side} {
         padding-left: $spacingVar;
         padding-right: $spacingVar;
       }
     }
     @if $side == --tb {
-      .app-padding__#{$spacingName}#{$side} {
+      .app-#{$spacingName}-padding#{$side} {
         padding-top: $spacingVar;
         padding-bottom: $spacingVar;
       }

@@ -1,15 +1,15 @@
 @import "variables";
 
-.app-margin__auto {
+.app-auto-margin {
   margin-left: auto;
   margin-right: auto;
 }
 
-.app-margin__auto--l {
+.app-auto-margin--l {
   margin-left: auto;
 }
 
-.app-margin__auto--r {
+.app-auto-margin--r {
   margin-right: auto;
 }
 
@@ -17,19 +17,19 @@
   @each $side, $cssSuffix in $spacingSides {
     @if $side != --tb {
       @if $side != --lr {
-        .app-margin__#{$spacingName}#{$side} {
+        .app-#{$spacingName}-margin#{$side} {
           margin#{$cssSuffix}: $spacingVar;
         }
       }
     }
     @if $side == --lr {
-      .app-margin__#{$spacingName}#{$side} {
+      .app-#{$spacingName}-margin#{$side} {
         margin-left: $spacingVar;
         margin-right: $spacingVar;
       }
     }
     @if $side == --tb {
-      .app-margin__#{$spacingName}#{$side} {
+      .app-#{$spacingName}-margin#{$side} {
         margin-top: $spacingVar;
         margin-bottom: $spacingVar;
       }

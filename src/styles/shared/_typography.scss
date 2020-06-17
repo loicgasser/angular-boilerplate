@@ -81,9 +81,9 @@ h6,
   line-height: $app-line-height--body;
 }
 
-// Header styles declaration app-text--h1
+// Header styles declaration app-h1-text
 @each $header in $headers {
-  .app-text--#{$header} {
+  .app-#{$header}-text {
     font-size: get-header-font-size($header);
     font-weight: get-header-font-weight($header);
     line-height: get-header-line-height($header);
